@@ -68,6 +68,9 @@ const Navbar = () => {
             <a href="#contact" className="hover:text-gray-400">
               Contact
             </a>
+            <a href="#contact2" className="hover:text-gray-400">
+              Contact
+            </a>
           </nav>
         </motion.div>
       )}
