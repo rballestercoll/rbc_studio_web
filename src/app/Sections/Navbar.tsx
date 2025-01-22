@@ -1,4 +1,3 @@
-// components/Navbar.tsx
 "use client";
 
 import { useState } from "react";
@@ -7,17 +6,13 @@ import { motion } from "framer-motion";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <div className="fixed top-0 left-0 w-full bg-gradient-to-r from-gray-800 to-blue-800 text-white z-50">
-      <div className="flex justify-between items-center p-4 max-w-7xl mx-auto">
+    <header className="fixed top-0 left-0 w-full z-50 p-4">
+      <div className="flex justify-between items-center max-w-7xl mx-auto">
         {/* Logo */}
-        <div className="text-3xl font-bold">
-          <span className="cursor-pointer">wb</span>
-        </div>
+        <h1 className="text-3xl font-bold cursor-pointer">rbc Studio</h1>
 
         {/* Menu Button */}
         <button
@@ -35,7 +30,7 @@ const Navbar = () => {
       {/* Fullscreen Menu */}
       {isMenuOpen && (
         <motion.div
-          className="fixed inset-0 bg-black text-white flex flex-col items-center justify-center space-y-8 text-4xl font-semibold"
+          className="fixed inset-0 bg-black text-white flex flex-col items-center justify-center space-y-6 text-4xl font-semibold"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -46,35 +41,15 @@ const Navbar = () => {
           >
             Close ✕
           </button>
-          <nav className="space-y-6">
-            <a href="#home" className="hover:text-gray-400">
-              Home
-            </a>
-            <a href="#ars" className="hover:text-gray-400">
-              Ars
-            </a>
-            <a href="#about" className="hover:text-gray-400">
-              About
-            </a>
-            <a href="#prints" className="hover:text-gray-400">
-              Prints
-            </a>
-            <a href="#nfts" className="hover:text-gray-400">
-              NFTs
-            </a>
-            <a href="#gallery" className="hover:text-gray-400">
-              Virtual Gallery
-            </a>
-            <a href="#contact" className="hover:text-gray-400">
-              Contact
-            </a>
-            <a href="#contact2" className="hover:text-gray-400">
-              Contact
+          <nav>
+            <a href="#hero" className="hover:text-gray-400 block">Hero</a>
+            <a href="#hello-world" className="hover:text-gray-400 block">
+              Hello World
             </a>
           </nav>
         </motion.div>
       )}
-    </div>
+    </header>
   );
 };
 
