@@ -4,9 +4,11 @@ const HelloWorld = () => {
         id="hello-world"
         className="h-screen flex flex-col items-center justify-center px-8 md:px-16 lg:px-32"
       >
-        <h2 className="text-5xl font-bold mb-6">{/* Título del componente */} //Hello World</h2>
+        <h2 className="text-5xl font-bold mb-6">
+            {/* Título del componente */} 
+            //Hello World</h2>
         <p className="text-lg max-w-2xl text-center mb-10">
-          At RBC Studio, we believe in merging design and programming. {/* Descripción del componente */}
+          At RBC Studio, we believe in merging design and programming. 
         </p>
         <button className="py-2 px-6 border border-white rounded-md hover:bg-white hover:text-black">
           About us
