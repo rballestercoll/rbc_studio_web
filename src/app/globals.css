@@ -5,6 +5,11 @@
 /* Fondo global y estilos generales */
 body {
   @apply bg-gradient-to-r from-black via-gray-900 to-blue-700 text-white;
-  @apply font-sans;
   @apply m-0;
+  font-family: var(--font-inter), sans-serif;
+}
+
+/* Fuente para encabezados */
+h1, h2 {
+  font-family: var(--font-adrich), sans-serif; 
 }

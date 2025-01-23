@@ -12,6 +12,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        adrich: ['Adrich', 'sans-serif'], // Fuente personalizada para encabezados
+        inter: ['Inter', 'sans-serif'],  // Fuente personalizada para párrafos
+      },
     },
   },
   plugins: [],
