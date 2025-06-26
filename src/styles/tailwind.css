@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #0D1B2A; /* Deep trust foundation - midnight navy */
+  --color-secondary: #1976FF; /* Innovation energy - electric blue */
+  --color-accent: #FF6B6B; /* Action clarity - neon coral */
+  
+  /* Background Colors */
+  --color-background: #FAFBFC; /* Clean content canvas - light gray */
+  --color-surface: #F5F7FA; /* Subtle card elevation - light gray */
+  
+  /* Text Colors */
+  --color-text-primary: #1A202C; /* High contrast readability - charcoal */
+  --color-text-secondary: #4A5568; /* Clear hierarchy - medium gray */
+  
+  /* Status Colors */
+  --color-success: #10B981; /* Positive progress confirmation - emerald green */
+  --color-warning: #F59E0B; /* Helpful urgency - amber */
+  --color-error: #EF4444; /* Constructive concern - red */
+  
+  /* Additional Brand Colors */
+  --color-trust: #2E7D32; /* Stability and growth - forest green */
+  --color-conversion: #FF4444; /* Conversion action - action red */
+  
+  /* Grid System */
+  --grid-base: 8px;
+  --grid-rhythm: 24px;
+  
+  /* Typography */
+  --font-primary: 'Inter', sans-serif;
+  --font-code: 'Fira Code', monospace;
+  
+  /* Shadows */
+  --shadow-subtle: 0 4px 12px rgba(13, 27, 42, 0.15);
+  --shadow-elevation: 0 4px 20px rgba(13, 27, 42, 0.1);
+  --shadow-cta: 0 8px 25px rgba(255, 107, 107, 0.3);
+  
+  /* Borders */
+  --border-subtle: 1px solid #E2E8F0;
+  --border-glass: 1px solid rgba(255, 255, 255, 0.2);
+  
+  /* Animation */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-page: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@layer base {
+*  {
+    
+  }
+  
+  body {
+    @apply bg-background text-text-primary font-primary;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-primary;
+  }
+  
+  code {
+    @apply font-code;
+  }
+}
+
+@layer components {
+  .grid-base {
+    display: grid;
+    gap: var(--grid-base);
+  }
+  
+  .grid-rhythm {
+    display: grid;
+    gap: var(--grid-rhythm);
+  }
+  
+  .glass-morphism {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: var(--border-glass);
+  }
+  
+  .elevation-subtle {
+    box-shadow: var(--shadow-subtle);
+  }
+  
+  .elevation-card {
+    box-shadow: var(--shadow-elevation);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-page {
+    transition: var(--transition-page);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .animation-delay-100 {
+    animation-delay: 0.1s;
+  }
+  
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+  
+  .animation-delay-300 {
+    animation-delay: 0.3s;
+  }
+  
+  .hover-lift {
+    @apply transition-smooth;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-2px) scale(1.02);
+  }
+  
+  .hover-depth {
+    @apply transition-smooth;
+  }
+  
+  .hover-depth:hover {
+    transform: rotateY(5deg);
+    perspective: 1000px;
+  }
+  
+  .pulse-subtle {
+    animation: pulse-subtle 2s infinite;
+  }
+  
+  @keyframes pulse-subtle {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
+}
